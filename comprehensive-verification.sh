@@ -1,0 +1,51 @@
+#!/bin/bash
+echo "═══════════════════════════════════════════════════════════════"
+echo "  COMPREHENSIVE VERIFICATION - ALL FEATURES"
+echo "═══════════════════════════════════════════════════════════════"
+echo ""
+
+PROJECT_ROOT="/Users/siva-6452/money-expense-tracker"
+cd "$PROJECT_ROOT"
+
+echo "✅ 1. Photo Features:"
+grep -q "PhotoUpload" src/components/ExpenseForm.tsx && echo "   ✅ PhotoUpload in ExpenseForm" || echo "   ❌ Missing PhotoUpload in ExpenseForm"
+grep -q "PhotoView" src/pages/Expenses.tsx && echo "   ✅ PhotoView in Expenses page" || echo "   ❌ Missing PhotoView in Expenses"
+grep -q "PhotoUpload" src/components/TransactionForm.tsx && echo "   ✅ PhotoUpload in TransactionForm (Income)" || echo "   ❌ Missing PhotoUpload in TransactionForm"
+grep -q "PhotoUpload" src/components/InvestmentForm.tsx && echo "   ✅ PhotoUpload in InvestmentForm" || echo "   ❌ Missing PhotoUpload in InvestmentForm"
+grep -q "PhotoView" src/pages/Incomes.tsx && echo "   ✅ PhotoView in Incomes page" || echo "   ❌ Missing PhotoView in Incomes"
+grep -q "PhotoView" src/pages/Investments.tsx && echo "   ✅ PhotoView in Investments page" || echo "   ❌ Missing PhotoView in Investments"
+
+echo ""
+echo "✅ 2. About Section:"
+grep -q "dagger_one" src/pages/Settings.tsx && echo "   ✅ About section: dagger_one team" || echo "   ❌ Missing dagger_one in About"
+grep -q "1.1.0" src/pages/Settings.tsx && echo "   ✅ Version 1.1.0 in Settings" || echo "   ❌ Missing version 1.1.0"
+grep -q "1.1.0" src/components/Navigation.tsx && echo "   ✅ Version 1.1.0 in Navigation" || echo "   ❌ Missing version 1.1.0"
+
+echo ""
+echo "✅ 3. Logo/Icon:"
+[ -f "android/app/src/main/res/drawable-v24/dagger_one_icon_foreground.xml" ] && echo "   ✅ Android icon foreground exists" || echo "   ❌ Missing icon foreground"
+[ -f "android/app/src/main/res/drawable/dagger_one_icon_background.xml" ] && echo "   ✅ Android icon background exists" || echo "   ❌ Missing icon background"
+grep -q "dagger_one_icon_foreground" android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml && echo "   ✅ Icon configured in launcher" || echo "   ❌ Icon not configured"
+
+echo ""
+echo "✅ 4. All Pages:"
+[ -f "src/pages/Dashboard.tsx" ] && echo "   ✅ Dashboard" || echo "   ❌ Missing Dashboard"
+[ -f "src/pages/Expenses.tsx" ] && echo "   ✅ Expenses" || echo "   ❌ Missing Expenses"
+[ -f "src/pages/Incomes.tsx" ] && echo "   ✅ Incomes" || echo "   ❌ Missing Incomes"
+[ -f "src/pages/Investments.tsx" ] && echo "   ✅ Investments" || echo "   ❌ Missing Investments"
+[ -f "src/pages/Accounts.tsx" ] && echo "   ✅ Accounts" || echo "   ❌ Missing Accounts"
+[ -f "src/pages/Reports.tsx" ] && echo "   ✅ Reports" || echo "   ❌ Missing Reports"
+[ -f "src/pages/Budget.tsx" ] && echo "   ✅ Budget" || echo "   ❌ Missing Budget"
+[ -f "src/pages/Settings.tsx" ] && echo "   ✅ Settings" || echo "   ❌ Missing Settings"
+
+echo ""
+echo "✅ 5. Build Status:"
+[ -d "dist" ] && echo "   ✅ Production build directory exists" || echo "   ❌ Build directory missing"
+[ -d "android/app/src/main/assets/public" ] && echo "   ✅ Android assets synced" || echo "   ❌ Android assets missing"
+JS_COUNT=$(find android/app/src/main/assets/public/assets -name "*.js" 2>/dev/null | wc -l | tr -d ' ')
+echo "   ✅ JavaScript files in Android: $JS_COUNT"
+
+echo ""
+echo "═══════════════════════════════════════════════════════════════"
+echo "✅ Verification Complete!"
+echo "═══════════════════════════════════════════════════════════════"

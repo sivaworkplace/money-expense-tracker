@@ -1,0 +1,24 @@
+═══════════════════════════════════════════════════════════════════
+  BUILD RELEASE APK IN ANDROID STUDIO - QUICK GUIDE
+═══════════════════════════════════════════════════════════════════
+
+✅ STEP 1: Wait for Gradle Sync
+   → Look at bottom right of Android Studio
+   → Wait for "Gradle sync finished"
+   → Usually takes 1-2 minutes
+
+✅ STEP 2: Build APK
+   → Click "Build" in top menu
+   → Select "Build Bundle(s) / APK(s)"
+   → Click "Build APK(s)"
+   → Wait 3-5 minutes
+
+✅ STEP 3: Find APK
+   → Click "locate" in notification
+   → OR check: android/app/build/outputs/apk/release/app-release.apk
+
+✅ STEP 4: Auto-Copy (Already Running)
+   → Script will automatically copy APK when ready
+   → Final location: APK_OUTPUT/app-release.apk
+
+═══════════════════════════════════════════════════════════════════

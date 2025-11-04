@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dagger One Brand Colors -->
+    <color name="yellow_primary">#F5DD61</color>
+    <color name="black_primary">#000000</color>
+    <color name="white_primary">#FFFFFF</color>
+    
+    <!-- Splash Screen Colors -->
+    <color name="splash_background">#F5DD61</color>
+    <color name="colorPrimary">#F5DD61</color>
+    <color name="colorPrimaryDark">#E5CD51</color>
+    <color name="colorAccent">#000000</color>
+</resources>
+

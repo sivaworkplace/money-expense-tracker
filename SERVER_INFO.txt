@@ -1,0 +1,13 @@
+Available servers:
+✅ Dev Server:     http://127.0.0.1:5173/
+✅ Preview Server: http://127.0.0.1:4173/
+
+Both are running and responding to requests!
+
+To access:
+1. Open your browser (Chrome recommended)
+2. Copy: http://127.0.0.1:5173/
+3. Paste in address bar
+4. Press Enter
+
+Your app should load!

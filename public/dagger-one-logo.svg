@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <!-- Peach to Pink Gradient Background -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFE5CC;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFCCE5;stop-opacity:1" />
+    </linearGradient>
+    <!-- Light Blue Lightbulb Fill -->
+    <linearGradient id="bulbGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B0E0E6;stop-opacity:1" />
+    </linearGradient>
+    <!-- Dagger Highlight -->
+    <linearGradient id="daggerHighlight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4A90E2;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#87CEEB;stop-opacity:0.3" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="400" fill="url(#bgGradient)"/>
+  
+  <!-- Lightbulb (Teardrop Shape) -->
+  <path d="M 200 60 Q 170 50 150 70 Q 130 90 130 130 L 130 200 Q 130 250 155 275 Q 180 300 200 300 Q 220 300 245 275 Q 270 250 270 200 L 270 130 Q 270 90 250 70 Q 230 50 200 60 Z" 
+        fill="url(#bulbGradient)" 
+        stroke="#1a1a2e" 
+        stroke-width="10" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"/>
+  
+  <!-- Lightbulb Highlight (Top-Left Glossy Effect) -->
+  <ellipse cx="175" cy="140" rx="35" ry="40" fill="#B0E0E6" opacity="0.8"/>
+  
+  <!-- Lightbulb Base/Socket (Three Horizontal Lines) -->
+  <line x1="145" y1="200" x2="255" y2="200" stroke="#1a1a2e" stroke-width="7" stroke-linecap="round"/>
+  <line x1="155" y1="215" x2="245" y2="215" stroke="#1a1a2e" stroke-width="6" stroke-linecap="round"/>
+  <line x1="165" y1="230" x2="235" y2="230" stroke="#1a1a2e" stroke-width="5" stroke-linecap="round"/>
+  
+  <!-- Dagger Inside Lightbulb (Pointing Up-Right) -->
+  <!-- Blade (Triangular Point) -->
+  <path d="M 200 110 L 218 180 L 208 188 L 200 155 L 192 188 L 182 180 Z" 
+        fill="#1a1a2e"/>
+  
+  <!-- Dagger Blade Highlight (Upper Edge) -->
+  <path d="M 200 110 L 218 180 L 208 188 L 200 155 Z" 
+        fill="url(#daggerHighlight)"/>
+  
+  <!-- Dagger Guard (Horizontal Bar) -->
+  <line x1="185" y1="180" x2="215" y2="180" 
+        stroke="#1a1a2e" 
+        stroke-width="8" 
+        stroke-linecap="round"/>
+  
+  <!-- Dagger Pommel (Small Circle) -->
+  <circle cx="200" cy="192" r="5" fill="#1a1a2e"/>
+  
+  <!-- Text: DAGGER ONE -->
+  <text x="200" y="340" 
+        font-family="Arial, Helvetica, sans-serif" 
+        font-size="36" 
+        font-weight="bold" 
+        fill="#1a1a2e" 
+        text-anchor="middle" 
+        letter-spacing="3">
+    DAGGER ONE
+  </text>
+</svg>
+

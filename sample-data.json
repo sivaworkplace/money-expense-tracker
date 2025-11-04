@@ -1,0 +1,185 @@
+{
+  "expenses": [
+    {
+      "id": "sample-1",
+      "amount": 450.00,
+      "category": "food",
+      "description": "Grocery shopping at SuperMart",
+      "date": "2025-11-01T10:30:00Z",
+      "paymentMethod": "credit_card",
+      "createdAt": "2025-11-01T10:30:00Z",
+      "updatedAt": "2025-11-01T10:30:00Z"
+    },
+    {
+      "id": "sample-2",
+      "amount": 150.00,
+      "category": "transport",
+      "description": "Uber ride to office",
+      "date": "2025-11-01T09:15:00Z",
+      "paymentMethod": "upi",
+      "createdAt": "2025-11-01T09:15:00Z",
+      "updatedAt": "2025-11-01T09:15:00Z"
+    },
+    {
+      "id": "sample-3",
+      "amount": 2500.00,
+      "category": "shopping",
+      "description": "New headphones",
+      "date": "2025-10-30T14:20:00Z",
+      "paymentMethod": "debit_card",
+      "createdAt": "2025-10-30T14:20:00Z",
+      "updatedAt": "2025-10-30T14:20:00Z"
+    },
+    {
+      "id": "sample-4",
+      "amount": 1200.00,
+      "category": "bills",
+      "description": "Electricity bill - October",
+      "date": "2025-10-28T16:00:00Z",
+      "paymentMethod": "bank_transfer",
+      "createdAt": "2025-10-28T16:00:00Z",
+      "updatedAt": "2025-10-28T16:00:00Z"
+    },
+    {
+      "id": "sample-5",
+      "amount": 800.00,
+      "category": "health",
+      "description": "Monthly gym membership",
+      "date": "2025-10-25T11:00:00Z",
+      "paymentMethod": "credit_card",
+      "createdAt": "2025-10-25T11:00:00Z",
+      "updatedAt": "2025-10-25T11:00:00Z"
+    },
+    {
+      "id": "sample-6",
+      "amount": 1500.00,
+      "category": "entertainment",
+      "description": "Movie tickets and dinner",
+      "date": "2025-10-22T19:30:00Z",
+      "paymentMethod": "cash",
+      "createdAt": "2025-10-22T19:30:00Z",
+      "updatedAt": "2025-10-22T19:30:00Z"
+    },
+    {
+      "id": "sample-7",
+      "amount": 3500.00,
+      "category": "education",
+      "description": "Online course subscription",
+      "date": "2025-10-20T10:00:00Z",
+      "paymentMethod": "credit_card",
+      "createdAt": "2025-10-20T10:00:00Z",
+      "updatedAt": "2025-10-20T10:00:00Z"
+    },
+    {
+      "id": "sample-8",
+      "amount": 350.00,
+      "category": "personal",
+      "description": "Haircut and grooming",
+      "date": "2025-10-18T15:00:00Z",
+      "paymentMethod": "upi",
+      "createdAt": "2025-10-18T15:00:00Z",
+      "updatedAt": "2025-10-18T15:00:00Z"
+    },
+    {
+      "id": "sample-9",
+      "amount": 250.00,
+      "category": "transport",
+      "description": "Fuel for car",
+      "date": "2025-10-15T08:00:00Z",
+      "paymentMethod": "debit_card",
+      "createdAt": "2025-10-15T08:00:00Z",
+      "updatedAt": "2025-10-15T08:00:00Z"
+    },
+    {
+      "id": "sample-10",
+      "amount": 600.00,
+      "category": "food",
+      "description": "Lunch at restaurant",
+      "date": "2025-10-12T13:30:00Z",
+      "paymentMethod": "credit_card",
+      "createdAt": "2025-10-12T13:30:00Z",
+      "updatedAt": "2025-10-12T13:30:00Z"
+    }
+  ],
+  "categories": [
+    {
+      "id": "food",
+      "name": "Food & Dining",
+      "icon": "🍔",
+      "color": "#FF6B6B",
+      "isCustom": false
+    },
+    {
+      "id": "transport",
+      "name": "Transport",
+      "icon": "🚗",
+      "color": "#4ECDC4",
+      "isCustom": false
+    },
+    {
+      "id": "shopping",
+      "name": "Shopping",
+      "icon": "🛍️",
+      "color": "#95E1D3",
+      "isCustom": false
+    },
+    {
+      "id": "bills",
+      "name": "Bills & Utilities",
+      "icon": "💡",
+      "color": "#F38181",
+      "isCustom": false
+    },
+    {
+      "id": "health",
+      "name": "Health & Fitness",
+      "icon": "💊",
+      "color": "#AA96DA",
+      "isCustom": false
+    },
+    {
+      "id": "entertainment",
+      "name": "Entertainment",
+      "icon": "🎬",
+      "color": "#FCBAD3",
+      "isCustom": false
+    },
+    {
+      "id": "education",
+      "name": "Education",
+      "icon": "📚",
+      "color": "#A8D8EA",
+      "isCustom": false
+    },
+    {
+      "id": "personal",
+      "name": "Personal Care",
+      "icon": "💄",
+      "color": "#FFD93D",
+      "isCustom": false
+    },
+    {
+      "id": "others",
+      "name": "Others",
+      "icon": "📦",
+      "color": "#A0A0A0",
+      "isCustom": false
+    }
+  ],
+  "budgets": {
+    "monthly": 30000,
+    "categories": {
+      "food": 8000,
+      "transport": 5000,
+      "shopping": 5000,
+      "bills": 3000,
+      "entertainment": 3000
+    }
+  },
+  "settings": {
+    "currency": "INR",
+    "dateFormat": "DD/MM/YYYY",
+    "theme": "light"
+  }
+}
+

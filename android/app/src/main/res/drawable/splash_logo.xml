@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Temporary Splash Logo - Replace with actual logo image -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Black Circle Background -->
+    <item
+        android:width="200dp"
+        android:height="200dp"
+        android:gravity="center">
+        <shape android:shape="oval">
+            <solid android:color="#000000" />
+        </shape>
+    </item>
+    
+    <!-- Inner Circle with Icon Placeholder -->
+    <item
+        android:width="180dp"
+        android:height="180dp"
+        android:gravity="center">
+        <shape android:shape="oval">
+            <solid android:color="#1a1a1a" />
+            <stroke
+                android:width="2dp"
+                android:color="#FFFFFF" />
+        </shape>
+    </item>
+</layer-list>
+

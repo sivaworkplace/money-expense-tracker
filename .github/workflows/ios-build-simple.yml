@@ -1,0 +1,56 @@
+name: iOS Build (Simple - No Developer Account)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main, master ]
+
+jobs:
+  build-ios:
+    runs-on: macos-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: |
+        npm ci --legacy-peer-deps
+        
+    - name: Build web assets
+      run: |
+        npm run build
+        
+    - name: Sync Capacitor iOS
+      run: |
+        npx cap sync ios
+        
+    - name: Setup CocoaPods
+      run: |
+        cd ios/App
+        gem install cocoapods
+        pod install
+        
+    - name: Build iOS app (simulator)
+      run: |
+        cd ios/App
+        xcodebuild -workspace App.xcworkspace \
+          -scheme App \
+          -configuration Debug \
+          -sdk iphonesimulator \
+          -derivedDataPath build
+        
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: ios-build
+        path: ios/App/build/**
+        retention-days: 7
+
