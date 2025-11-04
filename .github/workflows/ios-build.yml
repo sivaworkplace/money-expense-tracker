@@ -42,7 +42,8 @@ jobs:
       run: |
         cd ios/App
         gem install cocoapods || echo "CocoaPods already installed"
-        pod install || pod install --repo-update
+        pod repo update || echo "Repo update skipped"
+        pod install --repo-update
         
     - name: Build iOS app for device
       run: |
