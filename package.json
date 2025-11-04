@@ -1,19 +1,48 @@
-node:internal/modules/package_json_reader:141
-  const result = modulesBinding.getNearestParentPackageJSON(checkPath);
-                                ^
-
-Error: Invalid package config /Users/siva-6452/money-expense-tracker/package.json.
-    at Object.getNearestParentPackageJSON (node:internal/modules/package_json_reader:141:33)
-    at trySelf (node:internal/modules/cjs/loader:620:33)
-    at Module._resolveFilename (node:internal/modules/cjs/loader:1387:24)
-    at defaultResolveImpl (node:internal/modules/cjs/loader:1051:19)
-    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1056:22)
-    at Module._load (node:internal/modules/cjs/loader:1219:37)
-    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
-    at wrapModuleLoad (node:internal/modules/cjs/loader:238:24)
-    at Module.require (node:internal/modules/cjs/loader:1493:12)
-    at require (node:internal/modules/helpers:152:16) {
-  code: 'ERR_INVALID_PACKAGE_CONFIG'
+{
+  "name": "expense-tracker",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "sync": "npx cap sync",
+    "sync:android": "npx cap sync android",
+    "sync:ios": "npx cap sync ios",
+    "open:android": "npx cap open android",
+    "open:ios": "npx cap open ios"
+  },
+  "dependencies": {
+    "@capacitor/android": "^5.5.1",
+    "@capacitor/app": "^5.0.8",
+    "@capacitor/camera": "^5.0.10",
+    "@capacitor/core": "^5.5.1",
+    "@capacitor/filesystem": "^5.2.2",
+    "@capacitor/ios": "^7.4.4",
+    "@capacitor/share": "^5.0.8",
+    "@capacitor/splash-screen": "^5.0.8",
+    "@capacitor/status-bar": "^5.0.8",
+    "date-fns": "^2.30.0",
+    "idb": "^7.1.1",
+    "lucide-react": "^0.294.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "recharts": "^2.10.3",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^5.5.1",
+    "@types/node": "^20.10.5",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@types/uuid": "^9.0.7",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.3.6",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.8",
+    "vite-plugin-pwa": "^0.17.4"
+  }
 }
-
-Node.js v24.5.0
