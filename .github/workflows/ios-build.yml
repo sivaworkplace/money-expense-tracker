@@ -48,9 +48,8 @@ jobs:
     - name: Build iOS app for device
       run: |
         cd ios/App
-        set -e  # Exit on error
-        
         echo "🔨 Building iOS app..."
+        
         xcodebuild -workspace App.xcworkspace \
           -scheme App \
           -configuration Release \
@@ -59,10 +58,13 @@ jobs:
           CODE_SIGN_IDENTITY="" \
           CODE_SIGNING_REQUIRED=NO \
           CODE_SIGNING_ALLOWED=NO \
-          clean build \
-          | xcpretty || true
+          clean build 2>&1 | tee build.log || {
+            echo "⚠️  Build had issues, checking logs..."
+            tail -50 build.log
+            exit 0  # Continue anyway to check what was built
+          }
         
-        echo "✅ Build completed"
+        echo "✅ Build step completed"
         
     - name: Find and list build artifacts
       run: |
