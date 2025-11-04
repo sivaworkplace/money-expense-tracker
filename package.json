@@ -1,1 +1,19 @@
+node:internal/modules/package_json_reader:141
+  const result = modulesBinding.getNearestParentPackageJSON(checkPath);
+                                ^
 
+Error: Invalid package config /Users/siva-6452/money-expense-tracker/package.json.
+    at Object.getNearestParentPackageJSON (node:internal/modules/package_json_reader:141:33)
+    at trySelf (node:internal/modules/cjs/loader:620:33)
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1387:24)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1051:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1056:22)
+    at Module._load (node:internal/modules/cjs/loader:1219:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:238:24)
+    at Module.require (node:internal/modules/cjs/loader:1493:12)
+    at require (node:internal/modules/helpers:152:16) {
+  code: 'ERR_INVALID_PACKAGE_CONFIG'
+}
+
+Node.js v24.5.0
