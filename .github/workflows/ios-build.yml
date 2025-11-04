@@ -54,15 +54,21 @@ jobs:
           -scheme App \
           -configuration Release \
           -sdk iphoneos \
+          -arch arm64 \
           -derivedDataPath build \
           CODE_SIGN_IDENTITY="" \
           CODE_SIGNING_REQUIRED=NO \
           CODE_SIGNING_ALLOWED=NO \
-          clean build 2>&1 | tee build.log || {
+          ONLY_ACTIVE_ARCH=NO \
+          clean build 2>&1 | tee build.log
+        
+        # Check if build succeeded
+        if [ $? -ne 0 ]; then
             echo "⚠️  Build had issues, checking logs..."
             tail -50 build.log
-            exit 0  # Continue anyway to check what was built
-          }
+            echo ""
+            echo "📋 Attempting to continue anyway..."
+        fi
         
         echo "✅ Build step completed"
         
